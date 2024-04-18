@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- general meta tags -->
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- site specific tags -->
+  <title></title>
+  <!-- style sheets -->
+  <!-- <link rel="stylesheet" href="css-reset.css"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <main>
+    <section>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <h2>Enter the number of people:</h2>
+          <input type="number" id="numberOfPeople" placeholder="Enter number of people"/>
+          <p id="numberofpeople_err" class="error"></p>
+          <h2>Number of Tables: <%= restaurants.tables %></h2>
+          <button type="submit" id="closePopup">Submit</button>
+        </div>
+      </div>
+      <div>
+        <% restaurants.categories.forEach(category => { %>
+          <h2 class="category"><%= category.name %></h2>
+          <ul class="grid">
+            <% category.items.forEach(item => { %>
+              <li class="card">
+                <img src="/images/<%= item.img %>" id="Image">
+                <h3><%= item.name %></h3>
+                <p><%= item.details %></p>
+                <p>Price: <%= item.price %> SAR</p>
+                <button>Add to Cart</button>
+              </li>
+            <% }); %>
+          </ul>
+          <% }); %>
+      </div>
+    </section>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+</html>

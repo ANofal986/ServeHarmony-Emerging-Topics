@@ -1,0 +1,317 @@
+:root {
+    --bg-primary: #F5F5F5;
+    --bg-secondary: #D2B48C;
+    --text-primary: white;
+    --text-secondary: black;
+}
+
+html {
+    background-color: var(--bg-secondary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-primary);
+    border: 2px solid black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.09);
+}
+
+#Image {
+    width: 200px;
+    box-shadow: 0 0 20px rgba(105, 105, 105, 0.8);
+    border-radius: 10px;
+}
+
+.cafe img, .restaurant img {
+    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.page-wrapper {
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-box {
+    text-align: center;
+}
+
+.title {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.option-item {
+    margin: 20px 0;
+}
+
+.option-link {
+    background-color: var(--bg-secondary);
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 15px 30px;
+    border: 2px solid var(--text-primary);
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-link:hover, .option-link:focus {
+    background-color: rgb(226, 221, 221);
+    color: var(--bg-secondary);
+    border: solid 4px var(--bg-secondary);
+}
+
+.content-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 400px; 
+    padding: 20px; 
+    margin: auto;
+}
+
+.phone-number-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-secondary); /* Use the primary background color for consistency */
+    
+}
+
+.phone-number-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Added to center the content vertically */
+    padding: 2rem;
+    background-color: var(--text-primary);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.phone-number-page h1 {
+    color: var(--bg-secondary); 
+    margin-bottom: 2rem;    
+}
+
+.phone-number-page input[type="tel"] {
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid var(--bg-secondary);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.phone-number-page button {
+    margin-top: 8px; 
+    padding: 15px 30px;
+    width: 100%; 
+    color: white;
+    background-color: var(--bg-secondary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.phone-number-page button:hover{
+    background-color: rgb(226, 221, 221);
+}
+
+#number_err{
+    color: red;
+    text-align: center;
+}
+
+#numberofpeople_err{
+color: red;
+    text-align: center;
+}
+
+.card button{
+    background-color: var(--bg-secondary);
+    margin: 10px;
+    padding: 20px;
+    width: 60%;
+    font-size: larger;
+}
+
+.card button:hover{
+    background-color: rgb(226, 221, 221);
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    z-index: 1000;
+    overlay: black;
+}
+  
+.popup-content {
+    max-width: 300px;
+    margin: auto;
+}
+  
+.popup h2 {
+    margin-bottom: 10px;
+}
+  
+.popup input {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: var(--bg-secondary);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.popup button:hover {
+    background-color: rgb(226, 221, 221);    
+}
+  
+.container h1{
+    color:black
+}
+
+.container button{
+    color: black;
+}
+
+.category{
+    text-align: center;
+    background-color:var(--bg-primary);
+    border: solid var(--text-secondary);
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+       
+    }
+    .card{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    p {
+        margin: 5px;
+        font-size: 20px;
+    }
+    .card{
+        width: 70%;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 5px;
+        padding: 5px;
+    }
+    p {
+        margin: 5px;
+        font-size: 20px;
+    }
+    .phone-number-page .container {
+      
+        width: 75%; /* Slightly wider container for small screens */
+        margin: auto;
+
+    }
+
+    .page-wrapper {
+        background-color: var(--bg-secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        width: 60%;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card{
+        width: 65%;
+        padding: 10px;
+    }
+    
+}
+
+

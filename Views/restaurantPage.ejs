@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- general meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- style sheets -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- javascript files -->
+    <script src=""></script>
+ </head>   <!-- restaurant page thats takes data from a js file -->
+<body>
+    <main class="grid">
+        <% if(restaurants && restaurants.length> 0){ %>
+            <% restaurants.forEach(restaurant=> { %>
+                <div class="card">
+                    <a href="/restaurant/menu/<%= restaurant.id %>"><img src="/images/<%= restaurant.image %>" id="Image"></a>
+                    <h2><%= restaurant.name %></h2>
+                    <p><strong>Open Hours: </strong><%= restaurant.openHours %></p>
+                    <p><strong>Location:</strong><%= restaurant.address %></p>
+                    <button ><a href="/restaurant/menu/<%= restaurant.id %>">Dine in</a></button>
+                    <button data-id="<%= restaurant.id %>"><a href="/restaurant/menu/<%= restaurant.id %>">Take Away</a></button>
+                </div>
+            <% }) %>
+        <% } %>
+    </main>
+</body>
+</html>
